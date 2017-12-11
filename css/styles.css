@@ -1,0 +1,40 @@
+
+
+.parent {
+  display: flex;
+  border: 1px solid black;
+  flex-wrap: wrap;
+}
+
+.kid {
+  text-align: center;
+  border: 2px solid black;
+  height: 200px;
+  width: 200px;
+  margin: 5px;
+}
+
+.kid:nth-child(4n+1) {
+  background-color: lightblue;
+}
+.kid:nth-child(4n+2) {
+  background-color: lightyellow;
+}
+.kid:nth-child(4n+4) {
+  background-color: coral;
+}
+.kid:nth-child(4n+3) {
+  background-color: lightgreen;
+}
+
+*.kid {
+  flex-basis: 25%;
+}
+
+.kid:nth-child(1), .kid:nth-child(7) {
+  flex-grow: 2;
+}
+
+.kid:nth-child(4), .kid:nth-child(5), .kid:nth-child(6) {
+  flex-grow: .75;
+}
